@@ -67,47 +67,60 @@ async def library_view(request: Request, dir_index: Optional[int] = None):
     Lists available books. 
     If multiple directories are configured and no dir_index is provided, lists directories.
     """
-    # Case 1: Multiple directories and no selection -> Show Directories
-    if len(BOOK_DIRS) > 1 and dir_index is None:
-        directories = []
-        for i, d in enumerate(BOOK_DIRS):
-            directories.append({
-                "name": os.path.basename(os.path.abspath(d)) or d,
-                "path": os.path.abspath(d),
-                "index": i
-            })
-        return templates.TemplateResponse("library.html", {"request": request, "directories": directories})
+    import traceback
+    try:
+        # Safety check for empty BOOK_DIRS
+        local_book_dirs = BOOK_DIRS if BOOK_DIRS else ["."]
 
-    # Case 2: Show Books (from specific dir or default single dir)
-    target_idx = dir_index if dir_index is not None else 0
-    
-    if target_idx < 0 or target_idx >= len(BOOK_DIRS):
-        # Fallback or error
-        target_idx = 0
+        # Case 1: Multiple directories and no selection -> Show Directories
+        if len(local_book_dirs) > 1 and dir_index is None:
+            directories = []
+            for i, d in enumerate(local_book_dirs):
+                directories.append({
+                    "name": os.path.basename(os.path.abspath(d)) or d,
+                    "path": os.path.abspath(d),
+                    "index": i
+                })
+            return templates.TemplateResponse("library.html", {"request": request, "directories": directories})
 
-    target_dir = BOOK_DIRS[target_idx]
-    books = []
+        # Case 2: Show Books (from specific dir or default single dir)
+        target_idx = dir_index if dir_index is not None else 0
+        
+        if target_idx < 0 or target_idx >= len(local_book_dirs):
+            # Fallback or error
+            target_idx = 0
 
-    if os.path.exists(target_dir):
-        for item in os.listdir(target_dir):
-            if item.endswith("_data"):
-                full_item_path = os.path.join(target_dir, item)
-                if os.path.isdir(full_item_path):
-                    # Construct ID with index to ensure uniqueness/traceability
-                    # e.g. "0:dracula_data"
-                    scoped_id = f"{target_idx}:{item}"
-                    
-                    # Try to load to get title
-                    book = load_book_cached(scoped_id)
-                    if book:
-                        books.append({
-                            "id": scoped_id,
-                            "title": book.metadata.title,
-                            "author": ", ".join(book.metadata.authors),
-                            "chapters": len(book.spine)
-                        })
+        target_dir = local_book_dirs[target_idx]
+        books = []
 
-    return templates.TemplateResponse("library.html", {"request": request, "books": books})
+        if os.path.exists(target_dir):
+            for item in os.listdir(target_dir):
+                if item.endswith("_data"):
+                    full_item_path = os.path.join(target_dir, item)
+                    if os.path.isdir(full_item_path):
+                        # Construct ID with index to ensure uniqueness/traceability
+                        # e.g. "0:dracula_data"
+                        scoped_id = f"{target_idx}:{item}"
+                        
+                        # Try to load to get title
+                        book = load_book_cached(scoped_id)
+                        if book:
+                            # Safely handle authors list which might contain None or be None
+                            authors_list = book.metadata.authors or []
+                            author_str = ", ".join([str(a) for a in authors_list if a]) or "Unknown Author"
+                            
+                            books.append({
+                                "id": scoped_id,
+                                "title": book.metadata.title,
+                                "author": author_str,
+                                "chapters": len(book.spine)
+                            })
+
+        return templates.TemplateResponse("library.html", {"request": request, "books": books})
+    except Exception as e:
+        print(f"CRITICAL ERROR in library_view: {e}")
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=f"Internal Server Error: {e}")
 
 @app.get("/read/{book_id}", response_class=HTMLResponse)
 async def redirect_to_first_chapter(book_id: str):

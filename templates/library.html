@@ -37,19 +37,68 @@
                 <p>No processed books found. Run <code>reader3.py</code> on an epub first.</p>
             {% endif %}
 
-            <div class="book-grid">
+            <div class="book-grid" id="bookGrid" style="visibility: hidden;">
                 {% for book in books %}
-                <div class="book-card">
+                <div class="book-card" data-book-id="{{ book.id }}">
                     <div class="book-title">{{ book.title }}</div>
                     <div class="book-meta">
                         {{ book.author }}<br>
                         {{ book.chapters }} sections
                     </div>
-                    <a href="/read/{{ book.id }}/0" class="btn">Read Book</a>
+                    <div class="book-progress" style="font-size: 0.85em; color: #27ae60; margin-bottom: 10px; font-weight: bold; min-height: 1.2em;"></div>
+                    <a href="/read/{{ book.id }}/0" class="btn read-btn">Read Book</a>
                 </div>
                 {% endfor %}
             </div>
         {% endif %}
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.getElementById('bookGrid');
+            if (!grid) return;
+
+            const progressData = JSON.parse(localStorage.getItem('reader3_progress') || '{}');
+            const cards = Array.from(grid.querySelectorAll('.book-card'));
+
+            // Update cards with progress info
+            cards.forEach(card => {
+                const bookId = card.getAttribute('data-book-id');
+                const data = progressData[bookId];
+
+                if (data) {
+                    // Update Link
+                    const btn = card.querySelector('.read-btn');
+                    if (btn) {
+                        btn.href = `/read/${bookId}/${data.chapterIndex}`;
+                        btn.textContent = "Resume Reading";
+                    }
+
+                    // Update Progress Text
+                    const progressDiv = card.querySelector('.book-progress');
+                    if (progressDiv) {
+                        progressDiv.textContent = `Progress: ${data.percent}%`;
+                        progressDiv.style.display = 'block';
+                    }
+                    
+                    // Attach timestamp for sorting
+                    card.dataset.timestamp = data.timestamp;
+                } else {
+                    card.dataset.timestamp = 0;
+                }
+            });
+
+            // Sort cards: Recent first (descending timestamp)
+            cards.sort((a, b) => {
+                return b.dataset.timestamp - a.dataset.timestamp;
+            });
+
+            // Re-append to grid
+            cards.forEach(card => grid.appendChild(card));
+
+            // Show grid
+            grid.style.visibility = 'visible';
+        });
+    </script>
 </body>
 </html>

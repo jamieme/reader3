@@ -149,6 +149,38 @@
                 console.log("Could not find index for", filename);
             }
         }
+
+        // --- Progress Tracking ---
+        (function() {
+            try {
+                const bookId = "{{ book_id }}";
+                const currentChapter = {{ chapter_index }};
+                const totalChapters = {{ book.spine|length }};
+                
+                // Calculate percentage
+                // If total is 1, it's 100%. If current is 0, it's 0% (unless total 1).
+                let percent = 0;
+                if (totalChapters > 1) {
+                    percent = Math.round((currentChapter / (totalChapters - 1)) * 100);
+                } else {
+                    percent = 100;
+                }
+
+                const progressData = JSON.parse(localStorage.getItem('reader3_progress') || '{}');
+                
+                progressData[bookId] = {
+                    chapterIndex: currentChapter,
+                    totalChapters: totalChapters,
+                    timestamp: Date.now(),
+                    percent: percent
+                };
+
+                localStorage.setItem('reader3_progress', JSON.stringify(progressData));
+                console.log("Progress saved:", progressData[bookId]);
+            } catch (e) {
+                console.error("Error saving progress:", e);
+            }
+        })();
     </script>
 </body>
 </html>
