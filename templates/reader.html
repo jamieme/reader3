@@ -137,7 +137,17 @@
             const cleanFile = filename.split('#')[0];
             const anchor = filename.split('#')[1];
 
-            const idx = spineMap[cleanFile];
+            let idx = spineMap[cleanFile];
+
+            // Fallback: If not found, try decoding (e.g. %20 -> space)
+            if (idx === undefined) {
+                try {
+                    const decoded = decodeURIComponent(cleanFile);
+                    idx = spineMap[decoded];
+                } catch (e) {
+                    console.warn("Decoding failed for", cleanFile);
+                }
+            }
 
             if (idx !== undefined) {
                 let url = "/read/{{ book_id }}/" + idx;
@@ -146,7 +156,7 @@
                 // Let's just go to the page.
                 window.location.href = url;
             } else {
-                console.log("Could not find index for", filename);
+                console.error("Could not find index for", filename);
             }
         }
 
