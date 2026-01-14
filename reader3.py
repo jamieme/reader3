@@ -103,29 +103,32 @@ def parse_toc_recursive(toc_list, depth=0) -> List[TOCEntry]:
         # ebooklib TOC items are either `Link` objects or tuples (Section, [Children])
         if isinstance(item, tuple):
             section, children = item
+            href = unquote(section.href)
             entry = TOCEntry(
                 title=section.title,
-                href=section.href,
-                file_href=section.href.split('#')[0],
-                anchor=section.href.split('#')[1] if '#' in section.href else "",
+                href=href,
+                file_href=href.split('#')[0],
+                anchor=href.split('#')[1] if '#' in href else "",
                 children=parse_toc_recursive(children, depth + 1)
             )
             result.append(entry)
         elif isinstance(item, epub.Link):
+            href = unquote(item.href)
             entry = TOCEntry(
                 title=item.title,
-                href=item.href,
-                file_href=item.href.split('#')[0],
-                anchor=item.href.split('#')[1] if '#' in item.href else ""
+                href=href,
+                file_href=href.split('#')[0],
+                anchor=href.split('#')[1] if '#' in href else ""
             )
             result.append(entry)
         # Note: ebooklib sometimes returns direct Section objects without children
         elif isinstance(item, epub.Section):
+             href = unquote(item.href)
              entry = TOCEntry(
                 title=item.title,
-                href=item.href,
-                file_href=item.href.split('#')[0],
-                anchor=item.href.split('#')[1] if '#' in item.href else ""
+                href=href,
+                file_href=href.split('#')[0],
+                anchor=href.split('#')[1] if '#' in href else ""
             )
              result.append(entry)
 
@@ -229,8 +232,8 @@ def process_epub(epub_path: str, output_dir: str) -> Book:
             continue
 
         if item.get_type() == ebooklib.ITEM_DOCUMENT:
-            # Raw content
-            raw_content = item.get_content().decode('utf-8', errors='ignore')
+            # Raw content - let BeautifulSoup detect encoding from bytes
+            raw_content = item.get_content()
             soup = BeautifulSoup(raw_content, 'html.parser')
 
             # A. Fix Images

@@ -78,7 +78,7 @@
 
                        BETTER FIX: Use JavaScript to match filenames.
                     -->
-                    <a href="#" onclick="findAndGo('{{ item.file_href }}')"
+                    <a href="#" onclick="findAndGo('{{ item.file_href | replace("'", "\\'") }}')"
                        class="toc-link {% if is_active %}active{% endif %}">
                         {{ item.title }}
                     </a>
@@ -126,7 +126,7 @@
         // Pass the spine data from python to JS
         const spineMap = {
             {% for ch in book.spine %}
-            "{{ ch.href }}": {{ ch.order }},
+            {{ ch.href | tojson }}: {{ ch.order }},
             {% endfor %}
         };
 
