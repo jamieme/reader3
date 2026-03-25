@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="22fc7191-08f2-4917-a12d-ca4b4ff1c455" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="calibre (1.43.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Margin of Safety: Risk-Averse Value Investing Strategies for the Thoughtful Investor</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="num_1" playOrder="1">
+      <navLabel>
+        <text>Contents</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_001.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_2" playOrder="2">
+      <navLabel>
+        <text>Acknowledgments</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_002.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_3" playOrder="3">
+      <navLabel>
+        <text>Introduction</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_003.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_4" playOrder="4">
+      <navLabel>
+        <text>WHERE MOST INVESTORS STUMBLE</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_004.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_5" playOrder="5">
+      <navLabel>
+        <text>1.  Speculators and Unsuccessful Investors</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_005.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_6" playOrder="6">
+      <navLabel>
+        <text>2.  The Nature of Wall Street Works Against Investors</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_012.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_7" playOrder="7">
+      <navLabel>
+        <text>3.  The Institutional Performance Derby: The Client Is the Loser</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_020.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_8" playOrder="8">
+      <navLabel>
+        <text>4.  Delusions of Value: The Myths and Misconceptions of Junk Bonds in the 1980s</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_028.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_9" playOrder="9">
+      <navLabel>
+        <text>A VALUE-INVESTMENT PHILOSOPHY</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_040.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_10" playOrder="10">
+      <navLabel>
+        <text>5.  Defining Your Investment Goals</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_041.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_11" playOrder="11">
+      <navLabel>
+        <text>6.  Value Investing: The Importance of a Margin of Safety</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_042.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_12" playOrder="12">
+      <navLabel>
+        <text>7.  At the Root of a Value-Investment Philosophy</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_049.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_13" playOrder="13">
+      <navLabel>
+        <text>8.  The Art of Business Valuation</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_055.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_14" playOrder="14">
+      <navLabel>
+        <text>THE VALUE-INVESTMENT PROCESS</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_066.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_15" playOrder="15">
+      <navLabel>
+        <text>9.  Investment Research: The Challenge of Finding Attractive Investments</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_067.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_16" playOrder="16">
+      <navLabel>
+        <text>10.  Areas of Opportunity for Value Investors: Catalysts, Market Inefficiencies, and Institutional C</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_073.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_17" playOrder="17">
+      <navLabel>
+        <text>11.  Investing in Thrift Conversions</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_080.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_18" playOrder="18">
+      <navLabel>
+        <text>12.  Investing in Financially Distressed and Bankrupt Securities</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_082.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_19" playOrder="19">
+      <navLabel>
+        <text>13.  Portfolio Management and Trading</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_090.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_20" playOrder="20">
+      <navLabel>
+        <text>14.  Investment Alternatives for the Individual Investor</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_097.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_21" playOrder="21">
+      <navLabel>
+        <text>Glossary</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_100.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="num_22" playOrder="22">
+      <navLabel>
+        <text>Bibliography</text>
+      </navLabel>
+      <content src="Margin_of_Safety_Risk-averse_va_split_101.html"/>
+    </navPoint>
+  </navMap>
+</ncx>

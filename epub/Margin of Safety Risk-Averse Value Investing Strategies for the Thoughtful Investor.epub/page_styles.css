@@ -1,0 +1,54 @@
+@page {
+    margin-bottom: 5pt;
+    margin-top: 5pt
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-Roman.otf);
+    panose-1: 2 6 5 3 5 5 5 2 2 4;
+    font-family: "Caecilia LT Std"
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-Bold.otf);
+    panose-1: 2 6 8 3 5 5 5 2 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: bold
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-Heavy.otf);
+    panose-1: 2 6 8 3 5 5 5 2 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: 850
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-Italic.otf);
+    panose-1: 2 6 5 3 5 5 5 9 2 4;
+    font-family: "Caecilia LT Std";
+    font-style: italic
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-Light.otf);
+    panose-1: 2 6 5 3 4 5 5 2 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: 300
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-LightItalic.otf);
+    panose-1: 2 6 5 3 4 5 5 9 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: 300;
+    font-style: italic
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-HeavyItalic.otf);
+    panose-1: 2 6 8 3 5 5 5 9 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: 850;
+    font-style: italic
+    }
+@font-face {
+    src: url(fonts/CaeciliaLTStd-BoldItalic.otf);
+    panose-1: 2 6 8 3 5 5 5 9 2 4;
+    font-family: "Caecilia LT Std";
+    font-weight: bold;
+    font-style: italic
+    }

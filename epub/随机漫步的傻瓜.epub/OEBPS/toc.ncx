@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+   "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:a54e1e07-dfe5-4d04-b501-3ca7bbe44f10"/>
+    <meta name="dtb:depth" content="2"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>随机漫步的傻瓜</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>版权信息</text>
+      </navLabel>
+      <content src="Text/Copyright.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>各方赞誉</text>
+      </navLabel>
+      <content src="Text/Section0001.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>专家推荐</text>
+      </navLabel>
+      <content src="Text/Section0002.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>自序 任何人都会买卖</text>
+      </navLabel>
+      <content src="Text/Section0003.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>前言 幸运的交易员</text>
+      </navLabel>
+      <content src="Text/foreword.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>第一篇 黑天鹅事件</text>
+      </navLabel>
+      <content src="Text/Part1.xhtml"/>
+      <navPoint id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>第一章 赚钱的随机性</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_1"/>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>第二章 奇特的结算方法</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_2"/>
+      </navPoint>
+      <navPoint id="navPoint-9" playOrder="9">
+        <navLabel>
+          <text>第三章 从数学的角度思考历史</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_3"/>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>第四章 随机性和科学知识分子</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_4"/>
+      </navPoint>
+      <navPoint id="navPoint-11" playOrder="11">
+        <navLabel>
+          <text>第五章 最不适者可能生存吗？</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_5"/>
+      </navPoint>
+      <navPoint id="navPoint-12" playOrder="12">
+        <navLabel>
+          <text>第六章 偏态与不对称</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_6"/>
+      </navPoint>
+      <navPoint id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>第七章 归纳法的问题</text>
+        </navLabel>
+        <content src="Text/Part1.xhtml#sigil_toc_id_7"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-14" playOrder="14">
+      <navLabel>
+        <text>第二篇 打字机前的猴子</text>
+      </navLabel>
+      <content src="Text/Part2.xhtml"/>
+      <navPoint id="navPoint-15" playOrder="15">
+        <navLabel>
+          <text>第八章 太多“下一个富翁”</text>
+        </navLabel>
+        <content src="Text/Part2.xhtml#sigil_toc_id_8"/>
+      </navPoint>
+      <navPoint id="navPoint-16" playOrder="16">
+        <navLabel>
+          <text>第九章 买卖证券比煎蛋容易</text>
+        </navLabel>
+        <content src="Text/Part2.xhtml#sigil_toc_id_9"/>
+      </navPoint>
+      <navPoint id="navPoint-17" playOrder="17">
+        <navLabel>
+          <text>第十章 生活中的非线性现象</text>
+        </navLabel>
+        <content src="Text/Part2.xhtml#sigil_toc_id_10"/>
+      </navPoint>
+      <navPoint id="navPoint-18" playOrder="18">
+        <navLabel>
+          <text>第十一章 我们是概率盲</text>
+        </navLabel>
+        <content src="Text/Part2.xhtml#sigil_toc_id_11"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-19" playOrder="19">
+      <navLabel>
+        <text>第三篇 活在随机世界中</text>
+      </navLabel>
+      <content src="Text/Part3.xhtml"/>
+      <navPoint id="navPoint-20" playOrder="20">
+        <navLabel>
+          <text>第十二章 赌徒的迷信和笼中的鸽子</text>
+        </navLabel>
+        <content src="Text/Part3.xhtml#sigil_toc_id_12"/>
+      </navPoint>
+      <navPoint id="navPoint-21" playOrder="21">
+        <navLabel>
+          <text>第十三章 概率与怀疑论</text>
+        </navLabel>
+        <content src="Text/Part3.xhtml#sigil_toc_id_13"/>
+      </navPoint>
+      <navPoint id="navPoint-22" playOrder="22">
+        <navLabel>
+          <text>第十四章 掌控随机现象</text>
+        </navLabel>
+        <content src="Text/Part3.xhtml#sigil_toc_id_14"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-23" playOrder="23">
+      <navLabel>
+        <text>后记 遇上黑天鹅</text>
+      </navLabel>
+      <content src="Text/postscript.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

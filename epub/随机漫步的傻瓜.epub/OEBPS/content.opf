@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:a54e1e07-dfe5-4d04-b501-3ca7bbe44f10</dc:identifier>
+    <dc:title>随机漫步的傻瓜</dc:title>
+    <dc:creator opf:role="aut">[ 美] 纳西姆· 尼古拉斯· 塔勒布</dc:creator>
+    <dc:language>zh-CN</dc:language>
+    <dc:date opf:event="modification">2018-12-06</dc:date>
+    <dc:publisher>中信出版社</dc:publisher>
+    <dc:identifier opf:scheme="ISBN">978–7–5086–3374–9</dc:identifier>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta content="" name="Sigil version" />
+    <meta name="cover" content="cover.jpg" />
+    <meta property="dcterms:modified">2018-05-04T11:44:32Z</meta>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    <item id="Style_zmx.css" href="Styles/Style_zmx.css" media-type="text/css"/>
+    <item id="stylesheet.css" href="Styles/stylesheet.css" media-type="text/css"/>
+    <item id="Style0001.css" href="Styles/Style0001.css" media-type="text/css"/>
+    <item id="foreword.xhtml" href="Text/foreword.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Part1.xhtml" href="Text/Part1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Part2.xhtml" href="Text/Part2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="x001.jpg" href="Images/001.jpg" media-type="image/jpeg"/>
+    <item id="x003.jpg" href="Images/003.jpg" media-type="image/jpeg"/>
+    <item id="x002.jpg" href="Images/002.jpg" media-type="image/jpeg"/>
+    <item id="x004.jpg" href="Images/004.jpg" media-type="image/jpeg"/>
+    <item id="x005.jpg" href="Images/005.jpg" media-type="image/jpeg"/>
+    <item id="x006.jpg" href="Images/006.jpg" media-type="image/jpeg"/>
+    <item id="Part3.xhtml" href="Text/Part3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="postscript.xhtml" href="Text/postscript.xhtml" media-type="application/xhtml+xml"/>
+    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+    <item id="Section0001.xhtml" href="Text/Section0001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section0002.xhtml" href="Text/Section0002.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section0003.xhtml" href="Text/Section0003.xhtml" media-type="application/xhtml+xml"/>
+    <item id="sgc-nav.css" href="Styles/sgc-nav.css" media-type="text/css"/>
+    <item id="Copyright.xhtml" href="Text/Copyright.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="Copyright.xhtml"/>
+    <itemref idref="Section0001.xhtml"/>
+    <itemref idref="Section0002.xhtml"/>
+    <itemref idref="Section0003.xhtml"/>
+    <itemref idref="foreword.xhtml"/>
+    <itemref idref="Part1.xhtml"/>
+    <itemref idref="Part2.xhtml"/>
+    <itemref idref="Part3.xhtml"/>
+    <itemref idref="postscript.xhtml"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="封面" href="Text/cover.xhtml"/>
+  </guide>
+</package>
