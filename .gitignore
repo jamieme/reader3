@@ -11,6 +11,4 @@ wheels/
 
 # Custom
 *_data/
-*.epub
-epub/
 *.log
