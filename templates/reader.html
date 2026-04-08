@@ -78,7 +78,7 @@
 
                        BETTER FIX: Use JavaScript to match filenames.
                     -->
-                    <a href="#" onclick="findAndGo('{{ item.file_href | replace("'", "\\'") }}')"
+                    <a href="#" onclick="findAndGo('{{ item.href | replace("'", "\\'") }}')"
                        class="toc-link {% if is_active %}active{% endif %}">
                         {{ item.title }}
                     </a>
@@ -151,9 +151,9 @@
 
             if (idx !== undefined) {
                 let url = "/read/{{ book_id }}/" + idx;
-                // If there was an anchor, we could try to scroll to it,
-                // but simple page loads often lose anchor position without extra JS.
-                // Let's just go to the page.
+                if (anchor) {
+                    url += '#' + anchor;
+                }
                 window.location.href = url;
             } else {
                 console.error("Could not find index for", filename);

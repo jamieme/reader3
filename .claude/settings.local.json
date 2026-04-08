@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source .venv/bin/activate)",
+      "Bash(python reader3.py \"epub/One Up On Wall Street.epub\")",
+      "Bash(python3:*)",
+      "Bash(.venv/bin/python - << 'EOF'\nimport sys; sys.path.insert\\(0, '.'\\)\nimport reader3\nimport pickle\nwith open\\('epub/One Up On Wall Street_data/book.pkl', 'rb'\\) as f:\n    book = pickle.load\\(f\\)\n\nprint\\('=== TOC ==='\\)\ndef print_toc\\(items, depth=0\\):\n    for item in items:\n        print\\('  '*depth + f'[{item.file_href}#{item.anchor}] {item.title!r}'\\)\n        print_toc\\(item.children, depth+1\\)\nprint_toc\\(book.toc\\)\n\nprint\\(\\)\nprint\\('=== Spine around index 28 ==='\\)\nfor i in range\\(max\\(0,25\\), min\\(len\\(book.spine\\), 32\\)\\):\n    ch = book.spine[i]\n    print\\(f'  [{i}] href={ch.href!r} title={ch.title!r} content_len={len\\(ch.content\\)}'\\)\nEOF)",
+      "Bash(.venv/bin/python << 'PYEOF'\nimport sys, importlib\nsys.path.insert\\(0, '/Users/jamie/codes/10kPer30day/reader3'\\)\nimport reader3\n\n# Monkey-patch __main__ so pickle finds the classes\nimport __main__\nfor name in ['Book','BookMetadata','ChapterContent','TOCEntry']:\n    setattr\\(__main__, name, getattr\\(reader3, name\\)\\)\n\nimport pickle\nwith open\\('epub/One Up On Wall Street_data/book.pkl', 'rb'\\) as f:\n    book = pickle.load\\(f\\)\n\nprint\\('=== TOC ==='\\)\ndef print_toc\\(items, depth=0\\):\n    for item in items:\n        print\\('  '*depth + f'[{item.file_href}] anchor={item.anchor!r} title={item.title!r}'\\)\n        print_toc\\(item.children, depth+1\\)\nprint_toc\\(book.toc\\)\n\nprint\\(\\)\nprint\\('=== Spine around index 28 ==='\\)\nfor i in range\\(max\\(0,25\\), min\\(len\\(book.spine\\), 32\\)\\):\n    ch = book.spine[i]\n    print\\(f'  [{i}] href={ch.href!r} title={ch.title!r} content_len={len\\(ch.content\\)}'\\)\nPYEOF)",
+      "Bash(python reader3.py \"epub/非对称风险.epub\")",
+      "Bash(python reader3.py \"epub/f非对称风险.epub\")",
+      "Bash(python -:*)",
+      "Bash(BOOK_ID=\"0:f%E9%9D%9E%E5%AF%B9%E7%A7%B0%E9%A3%8E%E9%99%A9_data\" curl -s \"http://localhost:8123/read/$BOOK_ID/8\")"
+    ]
+  }
+}
